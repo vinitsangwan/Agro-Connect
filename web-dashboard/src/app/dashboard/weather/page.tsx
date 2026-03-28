@@ -28,28 +28,61 @@ interface WeatherResponse {
 export default function WeatherPage() {
   const [weather, setWeather] = useState<WeatherResponse | null>(null);
   const [loading, setLoading] = useState(true);
-  const [lat, setLat] = useState(28.7136); // Default: Delhi
-  const [lon, setLon] = useState(77.1747);
+  const [lat, setLat] = useState<number | null>(null);
+  const [lon, setLon] = useState<number | null>(null);
 
   useEffect(() => {
-    // Try to get user's location
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          setLat(pos.coords.latitude);
-          setLon(pos.coords.longitude);
-        },
-        () => {
-          // Use default (Delhi)
-          loadWeather(lat, lon);
+    async function determineLocation() {
+      let finalLat = 28.7136; // Delhi default
+      let finalLon = 77.1747;
+
+      // 1. Check Database for saved location (synced from main dashboard)
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const uType = user.user_metadata?.user_type || 'FARMER';
+          const table = uType === 'FARMER' ? 'u_farmer_profile' : 'u_buyer_profile';
+          const { data: profile } = await supabase.from(table)
+            .select('primary_location_lat, primary_location_lon')
+            .eq('user_id', user.id)
+            .single();
+            
+          if (profile?.primary_location_lat && profile?.primary_location_lon) {
+            finalLat = profile.primary_location_lat;
+            finalLon = profile.primary_location_lon;
+          }
         }
-      );
+      } catch (err) {
+        console.warn('Could not fetch DB location fallback:', err);
+      }
+
+      // 2. Try to get Live Browser Location (takes priority over DB)
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            setLat(pos.coords.latitude);
+            setLon(pos.coords.longitude);
+          },
+          () => {
+            console.warn('Geolocation blocked/failed. Falling back to Profile/Delhi.');
+            setLat(finalLat);
+            setLon(finalLon);
+          },
+          { timeout: 4000 } // Give up after 4s to prevent hanging
+        );
+      } else {
+        setLat(finalLat);
+        setLon(finalLon);
+      }
     }
-    loadWeather(lat, lon);
+    
+    determineLocation();
   }, []);
 
   useEffect(() => {
-    loadWeather(lat, lon);
+    if (lat !== null && lon !== null) {
+      loadWeather(lat, lon);
+    }
   }, [lat, lon]);
 
   async function loadWeather(latitude: number, longitude: number) {
