@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/utils/supabase/client';
 import Link from 'next/link';
@@ -20,8 +20,11 @@ export default function RegisterPage() {
   const [locationLoading, setLocationLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const supabase = createClient();
+
+  useEffect(() => { setMounted(true); }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -79,6 +82,8 @@ export default function RegisterPage() {
       router.refresh();
     }
   };
+
+  if (!mounted) return null;
 
   return (
     <div className="auth-split-layout">
