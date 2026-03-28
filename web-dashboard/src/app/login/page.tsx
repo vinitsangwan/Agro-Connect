@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/utils/supabase/client';
 import Link from 'next/link';
@@ -12,6 +12,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const supabase = createClient();
 
@@ -46,6 +47,10 @@ export default function LoginPage() {
       setError(error.message);
     }
   };
+  useEffect(() => { setMounted(true); }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="auth-split-layout">
       {/* Left Side: Form Section */}
@@ -104,7 +109,7 @@ export default function LoginPage() {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '-8px' }}>
-              <Link href="#" style={{ color: 'var(--color-primary)', fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none' }}>
+              <Link href="/forgot-password" style={{ color: 'var(--color-primary)', fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none' }}>
                 Forgot your password?
               </Link>
             </div>
