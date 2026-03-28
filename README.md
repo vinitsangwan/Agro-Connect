@@ -95,6 +95,9 @@ Agro-Connect adheres to top-tier enterprise compliance metrics.
 ---
 
 ## 📋 Database Schema Context
+
+> 💡 **Bring Your Own Database:** When deploying locally, you cannot use the production database. Execute the provided [`database_schema.sql`](./database_schema.sql) file inside the SQL Editor of your new empty Supabase project to instantly scaffold the architecture below, including tables, relationships, triggers, and Row Level Security (RLS) policies.
+
 - `u_users` (UUID auth.users relational mapping)
 - `u_farmer_profile` & `u_buyer_profile` (Identity & Telemetry data)
 - `c_crops` & `c_mandis` (Foundational master records)
