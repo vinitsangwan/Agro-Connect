@@ -1,0 +1,338 @@
+{
+  "location": {
+    "lat": 28.7136,
+    "lon": 77.1747
+  },
+  "city": "28.71°N, 77.17°E",
+  "hourly": [
+    {
+      "datetime": "2026-03-28 10:00",
+      "temp_celsius": 26.2,
+      "humidity": 63,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 5.4,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 11:00",
+      "temp_celsius": 28.5,
+      "humidity": 50,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 4.9,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 12:00",
+      "temp_celsius": 29.5,
+      "humidity": 45,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 5.5,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 13:00",
+      "temp_celsius": 30.5,
+      "humidity": 40,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 6.3,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 14:00",
+      "temp_celsius": 31,
+      "humidity": 37,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 6.9,
+      "condition": "Clouds",
+      "condition_desc": "Partly cloudy",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 15:00",
+      "temp_celsius": 31.3,
+      "humidity": 35,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 6.5,
+      "condition": "Clouds",
+      "condition_desc": "Mainly clear",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 16:00",
+      "temp_celsius": 31.1,
+      "humidity": 35,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 5.6,
+      "condition": "Clouds",
+      "condition_desc": "Mainly clear",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 17:00",
+      "temp_celsius": 30.4,
+      "humidity": 36,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 4.1,
+      "condition": "Clouds",
+      "condition_desc": "Partly cloudy",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 18:00",
+      "temp_celsius": 28.6,
+      "humidity": 47,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 2.8,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 19:00",
+      "temp_celsius": 27.3,
+      "humidity": 52,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 2.1,
+      "condition": "Clouds",
+      "condition_desc": "Partly cloudy",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 20:00",
+      "temp_celsius": 26.4,
+      "humidity": 53,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 2.3,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 21:00",
+      "temp_celsius": 25.5,
+      "humidity": 55,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.2,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 22:00",
+      "temp_celsius": 24.7,
+      "humidity": 57,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 2.6,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-28 23:00",
+      "temp_celsius": 23.8,
+      "humidity": 59,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.6,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 00:00",
+      "temp_celsius": 23.3,
+      "humidity": 59,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.5,
+      "condition": "Clouds",
+      "condition_desc": "Mainly clear",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 01:00",
+      "temp_celsius": 22.4,
+      "humidity": 62,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.7,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 02:00",
+      "temp_celsius": 21.8,
+      "humidity": 64,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 4,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 03:00",
+      "temp_celsius": 21.5,
+      "humidity": 66,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.7,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 04:00",
+      "temp_celsius": 21.3,
+      "humidity": 67,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.9,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 05:00",
+      "temp_celsius": 21,
+      "humidity": 68,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.9,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 06:00",
+      "temp_celsius": 20.7,
+      "humidity": 70,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.8,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 07:00",
+      "temp_celsius": 21.3,
+      "humidity": 71,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 3.2,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 08:00",
+      "temp_celsius": 23.7,
+      "humidity": 64,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 4.8,
+      "condition": "Clouds",
+      "condition_desc": "Partly cloudy",
+      "icon": "02d"
+    },
+    {
+      "datetime": "2026-03-29 09:00",
+      "temp_celsius": 26.3,
+      "humidity": 56,
+      "precipitation_mm": 0,
+      "wind_speed_kph": 5,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-03-28",
+      "temp_max": 31.3,
+      "temp_min": 18.5,
+      "temp_avg": 24.9,
+      "humidity_avg": 60,
+      "total_precipitation_mm": 0,
+      "wind_avg_kph": 6.9,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "date": "2026-03-29",
+      "temp_max": 33.1,
+      "temp_min": 20.7,
+      "temp_avg": 26.9,
+      "humidity_avg": 54,
+      "total_precipitation_mm": 0.1,
+      "wind_avg_kph": 5.4,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "date": "2026-03-30",
+      "temp_max": 29.2,
+      "temp_min": 22.3,
+      "temp_avg": 25.8,
+      "humidity_avg": 63,
+      "total_precipitation_mm": 0.1,
+      "wind_avg_kph": 13.2,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "date": "2026-03-31",
+      "temp_max": 32.5,
+      "temp_min": 18.7,
+      "temp_avg": 25.6,
+      "humidity_avg": 58,
+      "total_precipitation_mm": 0,
+      "wind_avg_kph": 7.9,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "date": "2026-04-01",
+      "temp_max": 31.5,
+      "temp_min": 22.4,
+      "temp_avg": 27,
+      "humidity_avg": 54,
+      "total_precipitation_mm": 0,
+      "wind_avg_kph": 5.4,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "date": "2026-04-02",
+      "temp_max": 31.6,
+      "temp_min": 20.1,
+      "temp_avg": 25.9,
+      "humidity_avg": 59,
+      "total_precipitation_mm": 0,
+      "wind_avg_kph": 4.8,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    },
+    {
+      "date": "2026-04-03",
+      "temp_max": 34,
+      "temp_min": 21.7,
+      "temp_avg": 27.9,
+      "humidity_avg": 62,
+      "total_precipitation_mm": 1.2,
+      "wind_avg_kph": 8.4,
+      "condition": "Clouds",
+      "condition_desc": "Overcast",
+      "icon": "02d"
+    }
+  ],
+  "farming_advisories": [
+    "Dry spell expected this week. Plan irrigation schedules and conserve water reserves."
+  ]
+}
