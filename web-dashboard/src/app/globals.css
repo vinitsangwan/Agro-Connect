@@ -732,22 +732,27 @@ img {
 .lang-switcher {
   display: flex;
   gap: 2px;
-  background: var(--color-bg-secondary);
+  background: var(--color-border-light);
   border-radius: var(--radius-md);
-  padding: 2px;
+  padding: 4px;
+  border: 1px solid var(--color-border);
 }
 
 .lang-btn {
-  padding: 5px 12px;
-  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
   border: none;
   background: transparent;
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-fast);
-  color: rgba(255, 255, 255, 0.85);
-  /* High Contrast for A11y */
+  transition: all var(--transition-base);
+  color: var(--color-text-secondary);
+}
+
+.lang-btn:hover:not(.active) {
+  background: rgba(5, 150, 105, 0.05);
+  color: var(--color-primary);
 }
 
 .lang-btn.active {
