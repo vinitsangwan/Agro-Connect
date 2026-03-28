@@ -41,31 +41,56 @@ Agro-Connect adheres to top-tier enterprise compliance metrics.
 
 ## 📦 Getting Started
 
+### Prerequisites
+- **Node.js**: v18 or newer
+- **Android Studio**: Latest release (Ladybug/Koala)
+- **Java Development Kit (JDK)**: Version 17
+- **Supabase**: An active [Supabase](https://supabase.com/) project to host the PostgreSQL database, GoTrue Auth layer, and Edge Functions.
+
 ### 1. Web Dashboard (Next.js)
 
-```bash
-# Navigate to the dashboard directory
-cd web-dashboard
+1. **Clone & Navigate**:
+   ```bash
+   git clone https://github.com/ayushmishra-18/Agro-Connect.git
+   cd "Agro-Connect/web-dashboard"
+   ```
 
-# Install dependencies (Node 18+ required)
-npm install
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-# Configure environment keys (.env.local)
-# NEXT_PUBLIC_SUPABASE_URL="..."
-# NEXT_PUBLIC_SUPABASE_ANON_KEY="..."
+3. **Configure Environment Variables**:
+   Create a `.env.local` file in the root of the `web-dashboard` directory containing your Supabase credentials:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL="https://[YOUR_PROJECT_ID].supabase.co"
+   NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-api-key"
+   ```
 
-# Boot the local development server (starts on port 3000)
-npm run dev
-```
+4. **Launch Local Server**:
+   ```bash
+   npm run dev
+   ```
+   *The application will boot and become accessible at `http://localhost:3000`.*
 
 ### 2. Android Client (Kotlin)
 
-1. Open the `./mobile-android/` directory inside **Android Studio**.
-2. Allow Gradle to sync dependencies (Ensure SDK 34 is active).
-3. Connect an Active Device or load an AVD Emulator.
-4. Run `assembleDebug` to compile. 
+1. **Import the Project**:
+   Launch **Android Studio** and select `Open`. Navigate to the cloned repository and select the `mobile-android` directory. Allow Gradle to execute its initial sync.
 
-> **Environment Constants:** The Supabase endpoints and Anon Keys are packaged directly into `build.gradle.kts` via `buildConfigField`. Keep local `.properties` synchronized if cloning into a new tenant.
+2. **Configure SDK & Local Properties**:
+   Open the `local.properties` file in the `mobile-android` root and define your Supabase endpoints. These are securely injected into `BuildConfig` during compilation:
+   ```properties
+   SUPABASE_URL="https://[YOUR_PROJECT_ID].supabase.co"
+   SUPABASE_ANKEY="your-anon-api-key"
+   ```
+
+3. **Compile and Execute**:
+   - Connect a physical Android device (via USB Debugging) or start an Android Virtual Device (AVD).
+   - Click the green **Run 'app'** button in the top toolbar. Or, you can execute the command-line equivalent:
+     ```bash
+     ./gradlew assembleDebug
+     ```
 
 ---
 
@@ -80,4 +105,4 @@ npm run dev
 ---
 
 ## 🤝 Contributing
-For feature additions, target branches using a standardized `feature/` taxonomy. Please consult the `/docs/` and `agro_connect_all_documentation.md` prior to executing significant architecture forks (especially regarding offline replication).
+For feature additions, branch off using a standardized `feature/` taxonomy (e.g., `feature/offline-sync`). Please consult the core issue tracker prior to executing significant architecture forks (especially regarding Subabase edge-functions or local Room persistence graphs). Ensure that code passes frontend ESLint tests and Android `lintRelease` prior to generating Pull Requests.
